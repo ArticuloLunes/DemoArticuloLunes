@@ -46,6 +46,23 @@ public class NumeroNatural {
         return false;
     }
 
+    //Este metodo evalua si es primo con parametro
+        public boolean Primo(int numero) {
+        if (numero == 1) {
+            return false;
+        } else {
+            for (int i = 2; i <= numero; i++) {
+                if (numero % i == 0) {
+                    if (numero == i) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+            }
+        }
+        return false;
+    }
     public Boolean Par() {
         return numero % 2 == 0;
     }
@@ -72,5 +89,17 @@ public class NumeroNatural {
         }
         return contador;
     }
-
+   
+    public int MostrarDigitosPrimos(){
+        int soloPrimos = 0, copia = this.getNumero(), resto;
+        while (copia != 0) {
+            resto = copia % 10;
+            if(Primo(resto)){
+               soloPrimos = soloPrimos * 10 + resto;
+            }
+       
+            copia = copia / 10;
+        }
+        return soloPrimos;
+    }
 }
