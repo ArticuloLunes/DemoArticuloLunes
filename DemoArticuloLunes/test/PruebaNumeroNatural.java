@@ -46,6 +46,13 @@ public class PruebaNumeroNatural {
         boolean resultado = numero.EsCapicua();
         assertEquals(true, resultado);
     }
+    
+    @Test
+    public void ContarDigitoNumero() {
+        NumeroNatural numero = new NumeroNatural(1);
+        int resultado = numero.ContadorDeDigitos();
+        assertEquals(1, resultado);
+    }
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
