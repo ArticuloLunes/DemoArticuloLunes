@@ -6,6 +6,8 @@
 
 package demoarticulolunes;
 
+import demoarticulolunes.Presentacion.FormularioPrincipal;
+
 /**
  *
  * @author Lidia
@@ -17,6 +19,8 @@ public class DemoArticuloLunes {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        FormularioPrincipal objFormularioPrincipal = new FormularioPrincipal();
+        objFormularioPrincipal.setVisible(true);
     }
     
 }
