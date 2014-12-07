@@ -28,5 +28,28 @@ public class NumeroNatural {
     public void setNumero(int numero) {
         this.numero = numero;
     }
-   
+    public boolean Primo(){
+        if(numero ==1 )
+        {
+            return false;
+        }
+        else{
+            for (int i = 2; i <= numero; i++) {
+                   if (numero % i == 0) {
+                        if (numero == i)
+                        {
+                            return true;
+                        }
+                        else {
+                            return false;
+                        }
+                    }
+            }
+        }
+        return false;
+    }
+    public Boolean Par() {
+            return numero % 2 == 0;
+        }
+    
 }
