@@ -4,12 +4,13 @@
  * and open the template in the editor.
  */
 
+import demoarticulolunes.Negocio.NumeroNatural;
 import org.junit.After;
 import org.junit.AfterClass;
+import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
@@ -34,6 +35,16 @@ public class PruebaNumeroNatural {
     
     @After
     public void tearDown() {
+    }
+    
+    /**
+     * Prueba poniendo un numero de un dígito
+     */
+    @Test
+    public void CapicuaUnDigito() {
+        NumeroNatural numero = new NumeroNatural(1);
+        boolean resultado = numero.EsCapicua();
+        assertEquals(true, resultado);
     }
 
     // TODO add test methods here.
