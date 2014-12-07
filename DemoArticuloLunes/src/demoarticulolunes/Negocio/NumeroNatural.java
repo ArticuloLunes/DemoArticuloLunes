@@ -11,5 +11,22 @@ package demoarticulolunes.Negocio;
  * @author Lidia
  */
 public class NumeroNatural {
-    
+   int numero;
+
+    public NumeroNatural(int numero) {
+        this.numero = numero;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public NumeroNatural() {
+        
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+   
 }
