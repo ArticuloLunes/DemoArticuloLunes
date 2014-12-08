@@ -48,10 +48,31 @@ public class PruebaNumeroNatural {
     }
     
     @Test
-    public void ContarDigitoNumero() {
+    public void Capicua3Digitos() {
+        NumeroNatural numero = new NumeroNatural(103);
+        boolean resultado = numero.EsCapicua();
+        assertEquals(false, resultado);
+    }
+    
+    @Test
+    public void ContarDigitoNumeroDeUnDigito() {
         NumeroNatural numero = new NumeroNatural(1);
         int resultado = numero.ContadorDeDigitos();
         assertEquals(1, resultado);
+    }
+    
+    @Test
+    public void ContarDigitoNumeroCero() {
+        NumeroNatural numero = new NumeroNatural(0);
+        int resultado = numero.ContadorDeDigitos();
+        assertEquals(0, resultado);
+    }
+    
+    @Test
+    public void ContarDigitoNumeroDe3Digito() {
+        NumeroNatural numero = new NumeroNatural(103);
+        int resultado = numero.ContadorDeDigitos();
+        assertEquals(3, resultado);
     }
 
     // TODO add test methods here.
