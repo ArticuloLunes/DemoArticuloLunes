@@ -89,6 +89,26 @@ public class NumeroNatural {
         }
         return contador;
     }
+    public boolean EsPrimo(int numero){
+        if(numero==0)
+            return false;
+        if(numero==1)
+            return false;
+        for(int i=2;i<=numero;i++){
+            if(numero%i==0){
+                if(i!=numero)
+                    return false;
+            }
+        }
+        return true;
+    }
+    
+    public boolean EsPar(int numero){
+        if(numero%2==0)
+            return true;
+        else
+            return false;
+    }
    
     public int MostrarDigitosPrimos(){
         int soloPrimos = 0, copia = this.getNumero(), resto;
