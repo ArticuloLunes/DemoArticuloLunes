@@ -89,6 +89,7 @@ public class NumeroNatural {
         }
         return contador;
     }
+  
     public boolean EsPrimo(int numero){
         if(numero==0)
             return false;
@@ -104,10 +105,14 @@ public class NumeroNatural {
     }
     
     public boolean EsPar(int numero){
-        if(numero%2==0)
+        if((numero % 2)==0)
+        {  
             return true;
+        }
         else
+        {
             return false;
+        }
     }
    
     public int MostrarDigitosPrimos(){
@@ -121,5 +126,26 @@ public class NumeroNatural {
             copia = copia / 10;
         }
         return soloPrimos;
+    }
+    
+    public String ContarDigitosParImpar() 
+    {
+        int di = 0; int dp = 0; int copia = this.getNumero(); int digito;
+        while (copia != 0)
+        {
+            digito = copia % 10;
+            if ((digito % 2) == 0)
+            {
+                dp = dp + 1;
+            }
+            else
+            {
+                di = di + 1;
+            }
+            copia = copia / 10;        
+        }
+
+        return "Digitos Pares:" + dp + " Digitos Impares:" + di;
+
     }
 }
